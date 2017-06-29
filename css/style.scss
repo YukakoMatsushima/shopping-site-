@@ -85,7 +85,6 @@ $ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ
  text-align: left;
  display: inline-block;
  margin-top: 5px;
-    margin-bottom: 15px;
 }
 .owl-theme .owl-dots .owl-dot span {
     width: 25px;
@@ -101,7 +100,8 @@ $ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ
     background: red;
 }
 .pc-title{
- margin-top: 20px;
+ margin-top: 30px;
+ margin-bottom: 20px;
  width:100%;
 }
 @media (max-width:550px) { 
@@ -122,6 +122,17 @@ $ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ
      display:none;
 }
 }
+.new-item{
+ display: block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width:100%;
+}
+@media (max-width:550px) { 
+.new-item{
+     display:none;
+}
+}
 
  .item-container
  {
@@ -131,13 +142,15 @@ $ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ
     flex-wrap: wrap;
     justify-content: space-between;
  .item-box{
+  @include fontsize(12);
+  
   -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
     width: 33%;
-    margin-top: 2px;
     background-color: #FFFFFF;
-    padding-top: 15px;
+    padding: 10px;
+    margin-bottom: 2px;
   img{
    display: block;
     margin-left: auto;
@@ -149,7 +162,11 @@ $ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ
     margin-left: auto;
     margin-right: auto;
     margin-top: 5px;
-    font-size: 85%;
+    margin-bottom: 10px;
+  }
+  .yen{
+   margin-bottom: 0;
+    margin-top: 0;
   }
   }
   }  
@@ -190,16 +207,16 @@ $ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ
        -moz-box-sizing: border-box;
             box-sizing: border-box;
     width:49.8%;
-    margin-top: 20px;
     padding-top: 3%;
     padding-right: 2%;
     padding-left: 2%;
+    padding-bottom: 20px;
    h2{
-    font-size: 120%;
+    @include fontsize(16);
     color:#887f69;
    } 
    h3{
-    font-size: 85%;
+    @include fontsize(12);
     display: block;
     margin-bottom: 0;
     color:#887f69;
@@ -207,7 +224,9 @@ $ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ
    p{
     display: block;
     margin-bottom: 10px;
-  font-size: 85%; }
+    margin-top: 5px;
+  @include fontsize(12);
+   }
   .cards{
    width: 100%;
   }
@@ -275,7 +294,8 @@ $ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ
 .category-name{
  background: #FFFFFF url(../images/top/next_icon_gray.png) no-repeat center right 10px;
   padding: 10px;
-  font-size: 80%;
+  margin-bottom: 1px;
+ @include fontsize(12);
   .nexticon{
    padding-left: 100px;
     display: inline-block;
@@ -293,26 +313,26 @@ $ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ
 }
 .sidebar-box{
  background-color: #FFFFFF;
+ padding: 10px;
  .sidebar-img{
   display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
     width:100%;
  }
  p{
-    font-size: 85%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
+    margin-top:10px;
+    @include fontsize(12);
   }
   .morebtn{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 }
 @media (max-width:550px) { 
@@ -350,47 +370,44 @@ $ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ
  
 
 // footer
+.footer-box{
+ margin-top: 80px;
 .pagetop{
 display: block;
     margin: 0 0 0 auto;
+    padding-bottom: 20px;
 }
-
-@media (max-width:550px) { 
- .pagetop{
- margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
- }
-}
-.footer-box{
-     margin-top: 20PX;
 .footer-inner-box{
  padding-top: 30px;
     border-top-style: solid;
     border-width: thin;
  p{
   text-align: center;
-    font-size: 85%;
-  .copy{
-   font-size: 70%;
-    color: gray;
+     @include fontsize(12);
  }
+  .copy{
+    @include fontsize(10);
+    color:#c8c5be;
  }
 }
 }
 
+ 
+
 @media (max-width:550px) { 
  .footer-box{
- .footer-inner-box{
- p{
-      font-size: 80%;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-bottom: 10px;
+ margin-top: 30px;
+ .pagetop{
+ margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
  }
 }
 }
-}
+
+
+
+
 
 .home{
  .cate-name{
@@ -444,6 +461,7 @@ display: block;
     border-radius: 0px;
     margin-top: 15px;
     float: left;
+    margin-bottom: 0;
  }
  .nextbtn{
   text-align: center;
@@ -455,6 +473,7 @@ display: block;
     border-radius: 0px;
     margin-top: 15px;
     float: right;
+    margin-bottom: 0;
  }
 }
 @media (max-width:550px) { 
@@ -466,10 +485,14 @@ display: block;
 }
 }
 
- .pc-title{
-  margin-top: 20px;
+.recent-items{
+ .recenttitle{
+  margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
  }
- 
+}
+
 #product_img
 {
     display: flex;
@@ -494,11 +517,13 @@ display: block;
   .name{
    font-weight: bold;
     letter-spacing: 1px;
+     @include fontsize(14);
   }
   .number{
    color:#a6a6a6;
    display: block;
     margin-left: auto;
+     @include fontsize(10);
   }
  }
  #product_img{
@@ -543,7 +568,7 @@ display: block;
     text-align: center;
     padding: 10px;
     font-weight: normal;
-    font-size: 80%;
+     @include fontsize(12);
     color:#887f69;
     
 }
@@ -606,18 +631,21 @@ display: block;
     padding-bottom: 15px;
     border-bottom: solid 1px;
     padding-top: 40px;
+     @include fontsize(16);
  }
  .title2{
   color: #887f69;
+   @include fontsize(16);
  }
  .text{
       font-size: 90%;
       margin-bottom: 5px;
+       @include fontsize(14);
  }
  table{
   margin-left: auto;
     margin-right: auto;
-    font-size: 80%;
+     @include fontsize(12);
     width: 80%;
     color: #887f69;
     tr{
@@ -683,6 +711,13 @@ display: block;
  .title{
   border-top:none;
   padding-top: 20px;
+   @include fontsize(16);
+ }
+ .title2{ 
+  @include fontsize(16);
+ }
+ .text{
+   @include fontsize(14);
  }
  table{
   width:100%;
